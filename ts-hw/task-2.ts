@@ -5,7 +5,14 @@
     та призначити його тип об'єкту product.
 */
 
-const product = {
-    title: "Телефон",
-    price: 1000
+
+interface Product  {
+    title: string;
+    price: string;
+    description?: string;
+}
+
+const product: Product = {
+    title: 'Телефон',
+    price: "1000"
 };

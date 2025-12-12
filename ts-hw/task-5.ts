@@ -5,6 +5,16 @@
     та призначити його тип об'єкту person.
 */
 
+
+interface Person {
+  name: string;
+  age: number;
+  address: {
+    city: string;
+    street: string;
+  };
+}
+
 const person = {
     name: "Alex",
     age: 25,

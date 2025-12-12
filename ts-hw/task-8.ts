@@ -10,3 +10,15 @@
     const myBook: Book = createBook("TypeScript для початківців", 120);
 */
 
+export interface Book {
+  title: string;
+  pages: number;
+}
+
+
+export function createBook(title: string, pages: number): Book {
+  return { title, pages };
+}
+
+const myBook: Book = createBook("TypeScript для початківців", 120);
+console.log(myBook);

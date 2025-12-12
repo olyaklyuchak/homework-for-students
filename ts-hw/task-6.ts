@@ -13,3 +13,15 @@ interface User {
     age: number;
     email: string;
 }
+
+type FullUser = Required<User>;
+
+type FullUserManual = {
+  [K in keyof User]-?: User[K];
+};
+
+type PartialUser = Partial<User>;
+
+type PartialUserManual = {
+  [K in keyof User]?: User[K];
+};

@@ -5,3 +5,8 @@
 */
 
 const numbers = [1, 2, 2, 3, 4, 4];
+ let sum = 0;
+for(i=0; i < numbers.length; i++){
+    sum = sum + numbers[i];
+}
+ console.log("sum is: ", sum)

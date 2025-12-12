@@ -23,15 +23,49 @@ import './App.css'
 function App() {
 
   const [task, setTask] = React.useState(null);
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState("");
 
   React.useEffect(() => {
+    setLoading(true);
+    setError("");
 
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Помилка при запиті до API");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setTask(data);
+      })
+      .catch((err) => {
+        setError(err.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
   
-  return (<div className='container'>
-    <h1>React Homework</h1>
-  </div>)
+  return (
+    <div className='container'>
+      <h1>React Homework</h1>
+
+      {loading && <p>Завантаження...</p>}
+      {error && <p style={{color: "red"}}>Помилка: {error}</p>}
+
+      {task && (
+        <div className="task">
+          <h3>Task:</h3>
+          <p><strong>ID:</strong> {task.id}</p>
+          <p><strong>Title:</strong> {task.title}</p>
+          <p><strong>Completed:</strong> {task.completed ? "Yes" : "No"}</p>
+        </div>
+      )}
+
+    </div>
+  );
 }
 
 export default App;
-

@@ -6,3 +6,14 @@
 */
 
 const array = [1, 2, 3, 4, 5, 6];
+
+const NewArray = array.filter((number)=>{
+     if(number % 2 === 0 ){
+        return true
+     }
+     else{
+        return false
+     }
+})
+   
+console.log(NewArray)

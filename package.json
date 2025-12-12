@@ -1,0 +1,21 @@
+{
+  "name": "homework-for-students",
+  "version": "1.0.0",
+  "description": "Цей репозиторій містить домашні завдання з JavaScript, TypeScript, React та React Native.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olyaklyuchak/homework-for-students.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/olyaklyuchak/homework-for-students/issues"
+  },
+  "homepage": "https://github.com/olyaklyuchak/homework-for-students#readme"
+}
